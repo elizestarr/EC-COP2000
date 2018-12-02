@@ -1,0 +1,137 @@
+//Elize Starr Homework5 COP2000
+//  main.cpp
+//  COP2000_HOMEWORK5_ELIZESTARR
+//
+//  Created by Elize Starr on 11/19/18.
+//  Copyright © 2018 Elize Starr. All rights reserved.
+
+
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+
+using namespace std;
+
+void homeworkOutputThingy;
+bool testWinner;
+int ans = -1;
+void printBoard;
+
+//output of the homeowrk display board
+void homeworkOutputThingy();
+{
+    cout << " ******************************************************************" << endl;
+    cout << "                           MISSING NUMBERS GAME                    " << endl;
+    cout << "                              A fun brain game....                 " << endl;
+    cout << "                                                                   " << endl;
+    cout << "     Please Enter a whole number to guess the missing number...    " << endl;
+    cout << "         Program Developed by : Elize Starr "             ;" << endl;
+    cout << " ******************************************************************" << endl;
+    }
+    
+    int main()
+    
+    {
+        // game board arrays
+        // giving each array of the boards associated to their correct board
+        // 0 is the missing 'number'
+        int boardNum0 [4] [3] = { { 38, 11, 83},
+            { 15, 6, 33},
+            { 10, 2, 20},
+            { 86, 0, 95} };
+        
+        int boardNum1 [4] [3] = { { 90, 9, 45},
+            { 66, 12, 48},
+            { 34, 7, 70},
+            { 44, 0, 26} };
+        
+        
+        int boardNum2 [4] [3] = { { 28, 10, 55},
+            {89, 17, 98},
+            {22, 4, 31},
+            {69, 0, 78} };
+        
+        // i think this is how you make an array to give the correct answers
+        // made a new board for just the answers an array for each answer
+        
+        int correctAnsBoard0 [1] = { 14};
+        int correctAnsBoard1 [1] = { 8 };
+        int correctAnsBoard2 [1] = { 15 };
+        
+        // asking the user to put an answer
+        cout << " Enter a guess for 0 in the folowing game board:";
+        cin >> ans;
+        
+        // Input Validation
+        // answer must be greater than 0 and if not display a message
+        while (ans < 0)
+        {
+            cout << "Sorry, invalid number. Guess a digit greater than 0, or enter 0 to Exit";
+            cin >> ans;
+        }
+        
+        // bool statement to give a true falso for the answer of the board
+        bool testWinner(int ans, int boardNum, int ansBoard[]);
+        {
+            
+            //reply to answer from user whether or not it is correct or not
+            
+            // not too sure how to declare what answer corresponds with which board through my arrays
+            
+            // correct answer for board number 0 (1)
+            if (ans == correctAnsBoard0 (boardNum0 [ ])
+                {
+                    cout << "That is correct! \n" << endl;
+                    return true;
+                }
+                else
+                {
+                    cout << "I am sorry that is incorrect.\n" << endl;
+                    return false;
+                    
+                    // correct answer for board number 1 (2)
+                    if (ans == correctAnsBoard1 (boardNum1 [ ])
+                        {
+                            cout << "That is correct! \n" << endl;
+                            return true;
+                        }
+                        else
+                        {
+                            cout << "I am sorry that is incorrect.\n" << endl;
+                            return false;
+                            
+                            // correct answer for board number 2 (3)
+                            if (ans == correctAnsBoard2 (boardNum2 [ ])
+                                {
+                                    cout << "That is correct! \n" << endl;
+                                    return true;
+                                }
+                                else
+                                {
+                                    cout << "I am sorry that is incorrect.\n" << endl;
+                                    return false;
+                                    
+                                    
+                                    // displaying the board through switch statements
+                                    // this is FOR SURE incorrect, some syntax errors with the names of the function
+                                    void printBoard(int board_number);
+                                    {
+                                        switch (board_number)
+                                        
+                                        {   case 1:
+                                                displayBoard(boardNum0);
+                                                break;
+                                            case 2:
+                                                displayBoard(boardNum1);
+                                                break;
+                                            case 3:
+                                                displayBoard(boardNum2);
+                                                break;
+                                        }
+                                        // random board generator
+                                        randomNum = ( rand( ) % ( maxValue  minValue + 1 ) ) + minValue;
+                                        
+                                    }
+                                    
+                                    return 0;
+                                    
